@@ -1,6 +1,7 @@
 <h2 class="d-flex align-items-center justify-content-center bg-primary text-white pt-3">Log in</h2>
 
 
+
 <div class="d-flex align-items-center justify-content-center">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
@@ -20,9 +21,10 @@
     </div>
   <% end %>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
+ <div class="actions">
+  <%= f.submit "Log in", class: "btn btn-primary mt-3" %>
+</div>
+
   <div>
 <% end %>
 
