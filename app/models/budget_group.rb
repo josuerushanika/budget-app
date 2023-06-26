@@ -1,0 +1,2 @@
+class BudgetGroup < ApplicationRecord
+end
