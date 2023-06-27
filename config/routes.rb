@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  resources :users, only: [:index, :show] do
-    resources :groups, only: [:index, :show, :new, :create, :destroy]
+  resources :users, only: %i[index show] do
+    resources :groups, only: %i[index show new create destroy]
     resources :budgets
   end
 
