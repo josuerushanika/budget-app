@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources :users, only: %i[index show] do
     resources :groups, only: %i[index show new create destroy]
-    resources :budgets
+    resources :budgets, only: %i[index new]
   end
 
   root 'splash#index'

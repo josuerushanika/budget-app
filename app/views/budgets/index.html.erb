@@ -1,14 +1,30 @@
 <main>
-   <nav>
-     <a>
-      <==
-     </a>
-     <h2><%= @group.name %></h2>
+    <header>
+     <nav>
+      <a>
+       <==
+      </a>
+      <h2><%= @group.name %></h2>
 
-     <div>
+      <div>
        <h3>
           <%= link_to 'sign out', destroy_user_session_path, method: :delete%>
         </h3>
       </div>
-   </nav>
+     </nav>
+    </header> 
+
+    <div>
+      <% @budgets.each do |item| %>
+         <p><%= item.name %></p>
+         <p>$<%= item.amount%></p>
+         <p><%= item.created_at.to_date %></p>
+      <% end %>
+    </div>
+
+    <div>
+      <h2>
+         <%= link_to 'Add New Transaction', new_user_budget_path, class: "link-tag"%>
+      </h2>
+    </div>
 </main>
