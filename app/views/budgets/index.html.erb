@@ -1,0 +1,14 @@
+<main>
+   <nav>
+     <a>
+      <==
+     </a>
+     <h2><%= @group.name %></h2>
+
+     <div>
+       <h3>
+          <%= link_to 'sign out', destroy_user_session_path, method: :delete%>
+        </h3>
+      </div>
+   </nav>
+</main>
