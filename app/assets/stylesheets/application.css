@@ -13,3 +13,39 @@
  *= require_tree .
  *= require_self
  */
+
+ .return-back {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: white;
+  }
+
+  .white-color {
+    color: rgba(255, 255, 255, 0.884);
+  }
+
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+  }
+  
+  .hamburger-icon span {
+    width: 24px;
+    height: 2px;
+    background-color: #f0e4e4;
+    margin-bottom: 4px;
+  }  
+
+ 
+  

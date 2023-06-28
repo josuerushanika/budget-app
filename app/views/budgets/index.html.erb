@@ -1,18 +1,17 @@
 <main>
-    <header>
-     <nav>
-      <a>
-       <==
+   <header class="bg-primary text-white">
+   <nav class="navbar navbar-expand-lg navbar-dark bg-blue d-flex justify-content-between">
+     <a href="/">
+       <i class="return-back">&lt;</i>
       </a>
-      <h2><%= @group.name %></h2>
-
-      <div>
-       <h3>
-          <%= link_to 'sign out', destroy_user_session_path, method: :delete%>
-        </h3>
-      </div>
-     </nav>
-    </header> 
+    <h2 class="navbar-text"><%= @group.name %></h2>
+    <div class="ml-auto">
+      <h3 class="navbar-text">
+        <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: "text-white"%>
+      </h3>
+    </div>
+  </nav>
+</header>
 
     <div>
       <% @budgets.each do |item| %>
@@ -22,9 +21,9 @@
       <% end %>
     </div>
 
-    <div>
-      <h2>
-         <%= link_to 'Add New Transaction', new_user_group_budget_path, class: "link-tag"%>
-      </h2>
-    </div>
+ <div class="fixed-bottom text-center">
+  <%= link_to 'Add New Transaction', new_user_group_budget_path, class: "btn btn-primary link-tag"%>
+</div>
+
+
 </main>
