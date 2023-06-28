@@ -1,7 +1,7 @@
 <main>
    <section class="space-top">
       <% @group.each do |item|%>
-      <div class="boostrap">
+       <div class="d-flex flex-direction-row justify-content-between bg-white text-align-center align-content-center border border-grey p-1 m-4 mb-5">
          <img src=<%= item.icon %> class="img-boostrap">
          <div class="group-text">
            <h4 class="link-tag">
@@ -14,9 +14,11 @@
       <% end %>
    </section>
 
-   <section class= "boostrap-class">
-     <h2>
-       <%= link_to 'Add New Category', new_user_group_path, class: "link-tag"%>
-     </h2>
-   </section>
+<section class="d-flex flex-column fixed-bottom text-center bg-green w-100 p-2">
+  <h2>
+    <%= link_to 'Add New Category', new_user_group_path, class: "btn btn-primary btn-lg mt-3 link-tag"%>
+  </h2>
+</section>
+
+
 </main>
