@@ -2,8 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :users, only: %i[index show] do
-    resources :groups, only: %i[index show new create destroy]
+    resources :groups, only: %i[index show new create destroy] do
     resources :budgets, only: %i[index new]
+    end
   end
 
   root 'splash#index'

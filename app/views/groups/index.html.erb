@@ -5,7 +5,7 @@
          <img src=<%= item.icon %> class="img-boostrap">
          <div class="group-text">
            <h4 class="link-tag">
-             <%= link_to 'Add New Transaction', new_user_budget_path(current_user, @group), class: "link-tag" %>
+             <%= link_to item.name, new_user_group_budget_path(current_user,item), class: "link-tag" %>
             </h4> 
             <p class="boostrap-text"><%= item.created_at.to_date %></p>
          </div>

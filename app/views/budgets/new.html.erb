@@ -1,9 +1,37 @@
 <main>
    <header>
-      <nav>
-         <%= link_to(user_group_budgets_path(current_user)) do %>
-           <i> <= <i>
-         <% end %>
-      </nav>
+     <nav>
+    <%= link_to(user_group_budgets_path(current_user,@group)) do %>
+      <i> <= <i>
+    <% end %>
+     <h3 class="m-0 p-0"> Create New Transaction</h3>
+     <div class="d-flex text-decoration-none">
+       <h3>
+         <%= link_to 'sign out', destroy_user_session_path, method: :delete%>
+       </h3>
+     </div>
+   </nav>
    </header>
+
+  <div class="space-top">
+     <%= form_with model: @budget, url: user_group_budgets_path, method: :post, local: true, scope: :budget do |f|%>
+       <div class="field">
+        <%= f.text_field :name, placeholder: "Transaction Name", class: "form-control rounded"%>
+       </div>
+             <br>
+        <div class="field">
+        <%= f.text_field :amount, placeholder: "Enter Amount", class: "form-control rounded"%>
+       </div>
+          <br>
+       <div class="field">
+        <%= f.text_field :Category, placeholder: "Enter Amount", class: "form-control rounded"%>
+       </div>
+           <br>
+        <div class="d-flex flex-column fixed-bottom text-center green w-100 p-4">
+        <%= f.submit 'Save', class: "green border-create" %>
+       </div>
+     <% end %>
+  </div>
+
+
 </main>
