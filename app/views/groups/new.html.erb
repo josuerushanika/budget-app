@@ -1,32 +1,33 @@
 <main>
-
-   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary justify-content-between fixed-top">
    <a href="/">
        <i class="return-back">&lt;</i>
       </a>
   
-<div class="flex-container">
+<div class="container">
 <h3 class="m-0 p-0 white-color">Create New Category</h3>
   <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: "text-white link-tag"%>
 </div>
 
 </nav>
 
-    <div class="space-top">
-      <%= form_with model: @group, url: user_groups_path, method: :post, local: true, scope: :group do |f|%>
-       
-       <div class="field">
-        <%= f.text_field :name, placeholder: "Category Name"%>
-       </div>
-
-        <div class="field">
-         <%= f.text_field :icon, placeholder: "Enter Icon url"%>
-       </div>
-
-       <div class="submit-boostrap">
-        <%= f.submit 'CREATE CATEGORY'%>
-       </div>
-
-      <% end %>
+ <div class="space-top">
+  <%= form_with model: @group, url: user_groups_path, method: :post, local: true, scope: :group do |f| %>
+  
+    <div class="form-group">
+      <%= f.text_field :name, class: "form-control", placeholder: "Category Name" %>
     </div>
+
+    <div class="form-group">
+      <%= f.text_field :icon, class: "form-control", placeholder: "Enter Icon URL" %>
+    </div>
+
+   <div class="text-center position-fixed bottom-0 w-100">
+  <%= f.submit 'CREATE CATEGORY', class: "btn btn-primary" %>
+</div>
+
+
+  <% end %>
+</div>
+
 </main>

@@ -28,8 +28,24 @@
   .flex-container {
     display: flex;
     justify-content: space-between;
-  
   }
+
+  .hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+  }
+  
+  .hamburger-icon span {
+    width: 24px;
+    height: 2px;
+    background-color: #f0e4e4;
+    margin-bottom: 4px;
+  }  
 
  
   

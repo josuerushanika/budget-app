@@ -1,4 +1,17 @@
 <main>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary justify-content-between fixed-top">
+<div class="hamburger-icon">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+<div class="container">
+<h3 class="m-0 p-0 white-color">Create New Category</h3>
+  <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: "text-white link-tag"%>
+</div>
+
+</nav>
+  
    <section class="space-top">
       <% @group.each do |item|%>
        <div class="d-flex flex-direction-row justify-content-between bg-white text-align-center align-content-center border border-grey p-1 m-4 mb-5">
