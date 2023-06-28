@@ -5,13 +5,9 @@ class BudgetsController < ApplicationController
    @budgets = @group.budgets.includes(:budget_groups).order(created_at: :desc)
   end 
 
-  # def new
-  #   @budget = Budget.new
-  #   @group = Group.find(params[:group_id])
-
-  #   return unless @groups.nil
-  #   @group = []
-  # end
+  def new
+    @budget = Budget.new
+  end
 
   def create
     @budget = Budget.new(budget_params)
