@@ -5,6 +5,7 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.includes(:budgets).find(params[:id])
+    @sum = @group.budgets.sum { |i| i.amount   }
   end
 
   def new
