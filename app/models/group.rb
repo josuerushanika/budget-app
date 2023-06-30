@@ -6,7 +6,8 @@ class Group < ApplicationRecord
   validates :name, presence: true
   validates :icon, presence: true
 
-  def total_amount_by_group(group_id)
-    budgets.joins(:budget_groups).where(budget_groups: { group_id: group_id }).sum('budgets.amount')
+  def total_amount
+    budgets.sum(:amount)
   end
 end
+

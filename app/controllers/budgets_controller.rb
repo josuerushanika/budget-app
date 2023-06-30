@@ -6,13 +6,16 @@ class BudgetsController < ApplicationController
   end
 
   def new
-    @group = Group.find(params[:group_id])
     @budget = Budget.new
+    @group = Group.find(params[:group_id])
+
+    return unless @group.nil?
+      
+   @group = []
   end
 
   def create
-    @group = Group.find(params[:group_id])
-    @budget = @group.budgets.new(budget_params)
+    @budget = Budget.new(budget_params)
     @budget.author_id = current_user.id
 
     if @budget.save
