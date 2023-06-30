@@ -176,7 +176,9 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-
+- [ ] Delete function
+- [ ] Edit function
+- [ ] Expense search
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
