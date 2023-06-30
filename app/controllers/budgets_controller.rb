@@ -10,8 +10,8 @@ class BudgetsController < ApplicationController
     @group = Group.find(params[:group_id])
 
     return unless @group.nil?
-      
-   @group = []
+
+    @group = []
   end
 
   def create

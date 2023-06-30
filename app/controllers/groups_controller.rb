@@ -2,7 +2,7 @@ class GroupsController < ApplicationController
   def index
     @group = Group.includes(:budgets).where(author_id: current_user.id)
   end
-  
+
   def show
     @group = Group.includes(:budgets).find(params[:id])
   end
