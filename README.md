@@ -68,13 +68,13 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](-----------------------)
+- [Live Demo Link](https://rushanika.onrender.com/)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- VIDEO  PRESENTATION -->
 
 ## 🚀 Video presentation <a name="video-demo"></a>
 
-- [Video Link](-------------)
+- [Video Link](https://www.loom.com/share/0631c1e63511414d90646f66bcc62821)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -176,7 +176,9 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-
+- [ ] Delete function
+- [ ] Edit function
+- [ ] search
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -207,9 +209,6 @@ If you like this project, you can make contributions at https://github.com/josue
 I would like to thank the microverse team. Special recognition goes to  Gregoire Vella on behance for the inspiration behind the design
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-<!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 

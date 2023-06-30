@@ -15,4 +15,9 @@ class UsersController < ApplicationController
     sign_out current_user
     redirect_to authenticated_root_path
   end
+
+  def find_user
+    @user = User.find_by(id: params[:id])
+    redirect_to users_path, alert: 'User not found' unless @user
+  end
 end
