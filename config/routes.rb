@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources :users, only: %i[index show] do
     resources :groups, only: %i[index show new create destroy] do
-      resources :budgets, only: %i[index new]
+      resources :budgets, only: %i[index new create]
     end
   end
 
