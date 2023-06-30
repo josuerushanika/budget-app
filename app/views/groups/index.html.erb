@@ -12,34 +12,28 @@
 
 </nav>
   
- <section class="space-top">
-  <% @groups.each do |group| %>
-    <div class="d-flex flex-direction-row justify-content-between bg-white text-align-center align-content-center border border-grey p-1 m-4 mb-5">
-      <img src="<%= group.icon %>" class="img-boostrap">
-      <div class="group-text">
-        <h4 class="link-tag">
-          <%= link_to group.name, new_user_group_budget_path(current_user, group), class: "link-tag" %>
-        </h4> 
-        <p class="boostrap-text"><%= group.created_at.to_date %></p>
-      </div>
-      <div class="boostrap-class">
-        <% if group.budgets.present? %>
-          <% sum = group.total_amount %>
-          <p class="text-dark">$ <%= sum %></p>
-        <% else %>
-          <p class="text-dark">$ 0</p>
+ <body>
+    <div class="space-top">
+        <% @group.each do |item| %>
+        <div class="d-flex flex-direction-row justify-content-between bg-white text-align-center align-content-center border border-grey p-1 m-4 mb-5">
+            <img src=<%= item.icon %> class="img-fluid img-thumbnail w-25">
+            <div class="group-text">
+                <h3 class="link-tag">
+                    <%= link_to item.name, user_group_budgets_path(current_user, item.id), class: "link-tag" %>
+                </h3>
+                <p class="text-secondary date-text"><%= item.created_at.to_date %></p>
+            </div>
+            <div class="fw-bold p-4">$<%= item.total_amount_by_group(item.id) %></div>
+        </div>
         <% end %>
-      </div>
     </div>
-  <% end %>
-</section>
-
-
-<section class="d-flex flex-column fixed-bottom text-center bg-green w-100 p-2">
-  <h2>
-    <%= link_to 'Add New Category', new_user_group_path, class: "btn btn-primary btn-lg mt-3 link-tag"%>
-  </h2>
-</section>
+    <div class="d-flex flex-column fixed-bottom text-center green w-100 p-2">
+        <h2>
+            <%= link_to 'Add New Category', new_user_group_path, class: "link-tag" %>
+        </h2>
+    </div>
+     
+</body>
 
 
 </main>

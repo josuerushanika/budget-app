@@ -1,6 +1,6 @@
 class GroupsController < ApplicationController
   def index
-    @groups = Group.includes(:budgets).where(author_id: current_user.id)
+    @group = Group.includes(:budgets).where(author_id: current_user.id)
   end
   
   def show
